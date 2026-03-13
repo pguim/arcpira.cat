@@ -1,0 +1,21 @@
+---
+import { languages } from "../i18n/config";
+const current = Astro.params.lang || "ca";
+---
+
+<nav class="flex items-center">
+  <ul class="flex gap-3">
+    {
+      Object.entries(languages).map(([code, name]) => (
+        <li class="inline">
+          <a
+            href={`/${code}/`}
+            class={` text-neutral-700 text-[.9rem] ${code === current ? "font-bold" : ""}`}
+          >
+            {name}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

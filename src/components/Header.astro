@@ -1,0 +1,19 @@
+---
+import Hero from "./Hero.astro";
+import LanguageNavigator from "./LanguageNavigator.astro";
+const { props } = Astro.props;
+---
+
+<header class="flex flex-col h-lvh">
+  <div class="bg-neutral-100 flex flex-col md:flex-row items-center px-10 py-2">
+    <div class="flex gap-2 flex-1">
+      <img src="/logo.svg" class="w-8 md:w-16" />
+      <div class="flex gap-1 md:flex-col md:gap-0 md:justify-center">
+        <h2 class="text-md">Club de Tir amb Arc</h2>
+        <h1 class="text-md md:text-2xl">Pira</h1>
+      </div>
+    </div>
+    <LanguageNavigator />
+  </div>
+  <Hero props={props} />
+</header>

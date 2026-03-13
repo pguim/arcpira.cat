@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/Rubik.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto.ttf') format('truetype');
+}
+
+@layer base {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Rubik', sans-serif;
+  }
+
+  body,
+  p,
+  li,
+  span {
+    font-family: 'Roboto', sans-serif;
+  }
+}
